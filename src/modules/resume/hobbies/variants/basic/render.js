@@ -12,15 +12,18 @@ const useStyles = (theme) => ({
     color: 'white'
   },
   hobbiesItem: {
-    margin: 5
+    margin: '10px 5px',
+    paddingLeft: '5px',
+    fontWeight: 'bold'
   },
   hobbiesContainer: {
     lineHeight: 2,
-    display: 'flex'
+    margin: 0,
+    padding: '0 15px'
   }
 });
 
-const Basic = ({ theme, headlineText, hobbies }) => {
+const Basic = ({ theme, headlineText, listStyleType, hobbies }) => {
   const styles = useStyles(theme);
 
   return (
@@ -32,14 +35,11 @@ const Basic = ({ theme, headlineText, hobbies }) => {
       <h1 style={styles.headlineText}>{headlineText.value}</h1>
       <hr style={{ margin: 0 }} />
       <div style={{ padding: 20 }}>
-        {hobbies.value.map((hobby, id) => {
-          return (
-            <div key={id} style={styles.hobbiesContainer}>
-              <h4 style={styles.hobbiesItem}>{id + 1}.</h4>
-              <h4 style={styles.hobbiesItem}>{hobby.value}</h4>
-            </div>
-          );
-        })}
+        <ol style={{...styles.hobbiesContainer,listStyleType: listStyleType.value }}>
+          {hobbies.value.map((hobby, id) => (
+            <li key={id} style={styles.hobbiesItem}>{hobby.value}</li>
+          ))}
+        </ol>
       </div>
     </div>
   );

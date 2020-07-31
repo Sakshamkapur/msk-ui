@@ -14,6 +14,12 @@ const properties = {
     value: 'Hobbies',
     required: true
   },
+  listStyleType: {
+    name: 'List Style Type',
+    type: propertyTypes.STRING,
+    value: `'->'`,
+    required: false
+  },
   hobbies: {
     name: 'Projects',
     type: propertyTypes.ARRAY,

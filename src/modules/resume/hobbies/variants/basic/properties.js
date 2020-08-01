@@ -17,7 +17,7 @@ const properties = {
   listStyleType: {
     name: 'List Style Type',
     type: propertyTypes.STRING,
-    value: `'->'`,
+    value: `decimal`,
     required: false
   },
   hobbies: {

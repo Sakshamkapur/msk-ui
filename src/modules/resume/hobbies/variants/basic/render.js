@@ -13,8 +13,7 @@ const useStyles = (theme) => ({
   },
   hobbiesItem: {
     margin: '10px 5px',
-    paddingLeft: '5px',
-    fontWeight: 'bold'
+    paddingLeft: '5px'  
   },
   hobbiesContainer: {
     lineHeight: 2,
